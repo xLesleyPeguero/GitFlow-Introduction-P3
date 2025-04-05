@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Directory</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>Countries and Users Directory</h1>
+      <nav>
+        <ul class="logout-frame">
+          <li class="logout-button">
+            <a href="/login/login.html">Log Out</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/Country/country.html" aria-current="page">Countries</a></li>
+        <li><a href="/User/user.html">Users</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="users" class="tab-content">
+        <h2>Users</h2>
+
+        <form class="search-users-form">
+          <label for="search-users">Search by Name:</label>
+          <input name="name" type="text" id="search-users" placeholder="insert name..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Passwords</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="user-table-body"></tbody>
+        </table>
+
+        <div>
+            <button type="button" id="post-country" onclick="newUser()">Add New</button>
+            <button type="button" id="put-country" onclick="updateUser()">Update</button>
+            <button type="button" id="delete-country" onclick="deleteUser()">Delete</button>
+        </div>
+        <br>
+        <div id="form-content"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024, All Rights Reserved</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js" defer></script>
+  </body>
+</html>

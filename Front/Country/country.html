@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries Directory</title>
+    <link rel="stylesheet" href="country.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>Countries and Users Directory</h1>
+      <nav>
+        <ul class="logout-frame">
+          <li class="logout-button">
+            <a href="/login/login.html">Log Out</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/Country/country.html" aria-current="page">Countries</a></li>
+        <li><a href="/User/user.html">Users</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="countries" class="tab-content">
+        <h2>Countries</h2>
+
+        <!-- Search Form -->
+        <form
+          method="GET"
+          class="search-countries-form"
+          
+        >
+          <label for="search-countries">Search by Country:</label>
+          <input
+            name="name"
+            type="text"
+            id="search-countries"
+            placeholder="Search..."
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <!-- Countries Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Demonym</th>
+              <th>Capital</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="country-table-body">
+            <!-- Dynamic content will be injected here -->
+          </tbody>
+        </table>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button type="button" id="post-country" onclick="newCountry()">Add New</button>
+          <button type="button" id="put-country" onclick="updateCountry()">Update</button>
+          <button type="button" id="delete-country" onclick="deleteCountry()">Delete</button>
+        </div>
+        <br>
+        <div id="form-content"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024, All Rights Reserved</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="country.js" defer></script>
+  </body>
+</html>

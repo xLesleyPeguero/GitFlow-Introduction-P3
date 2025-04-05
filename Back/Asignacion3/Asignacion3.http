@@ -1,0 +1,6 @@
+@Asignacion3_HostAddress = http://localhost:5167
+
+GET {{Asignacion3_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
